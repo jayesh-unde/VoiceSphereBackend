@@ -2,7 +2,7 @@ const tokenService = require("../services/token-service");
 
 module.exports = async function(req,res,next){
     try{
-        const {accessToken} = req.cookies; // install cookie-parser 
+        const accessToken = req.cookies.accessToken; // install cookie-parser 
         if(!accessToken){
             throw new Error();
         }
