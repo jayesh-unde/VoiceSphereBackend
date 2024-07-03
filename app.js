@@ -39,7 +39,7 @@ app.use(router);
 app.use('/storage', express.static('storage'));
 
 
-
+app.set('trust proxy', 1); 
 app.get('/',(req,res)=>{
     // console.log("app is listening");
     res.send("app is listening");
